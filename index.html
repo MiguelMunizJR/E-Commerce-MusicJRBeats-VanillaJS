@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/0ac5016376.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,800;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/style.css">
     <title>E-commerce</title>
 </head>
@@ -19,13 +22,16 @@
         <div class="car">
             <div class="car-circle">
                 <button><i class="fa-solid fa-cart-shopping"></i></button>
-                <div class="circle"><span class="count-cart">0</span></div>
+                <div class="circle"><span>0</span></div>
             </div>
-            <h5 class="car-total">$<span>0.00</span></h5>
+            <h5 class="car-total">$<span>0</span></h5>
         </div>
 
         <section class="cart">
-            <h2 class="cart__title">Carrito de compras</h2>
+            <div class="cart-title__iconD">
+                <h2 class="cart__title">Carrito de compras</h2>
+                <button><i class="fa-solid fa-xmark"></i></button>
+            </div>
             <div class="cart-container">
 
                 <!-- <article class="cart-card">
@@ -37,11 +43,10 @@
                         <p class="cart-amount">Cantidad: <span>1</span></p>
                         <h4 class="cart-price">$<span>12,000</span></h4>
                     </div>
-                    <input type="button" value="Quitar" class="cart-card__btn"> -->
+                    <input type="button" value="Quitar" class="cart-card__btn"></article> -->
                 
-
             </div>
-            <h5 class="cart-total">$ <span></span>0</h5>
+            <h5 class="cart-total">$ <span>0</span></h5>
             <div class="cart-btn">
                 <input type="button" value="Comprar" class="btn-cart add">
                 <input type="button" value="Limpiar"
@@ -72,7 +77,7 @@
                     <h3 class="card-title">Trompeta Yamaha</h3>
                     <p class="card-info">Trompeta laqueada con detalles en plata. Tonalidad de sib.</p>
                     <h4 class="card-price">$<span>12,000</span></h4><hr>
-                    <input type="button" value="Agregar" data-id="1" class="card-btn">
+                    <input type="button" value="Agregar" class="card-btn" data-producto="Trompeta Yamaha" data-precio="12000" data-id="1" data-img="/assets/images/Trumpet.png">
                 </article>
 
                 <article class="card">
@@ -82,7 +87,7 @@
                     <h3 class="card-title">Batería Pearl</h3>
                     <p class="card-info">Batería Pearl color negro con detalles en plata.</p>
                     <h4 class="card-price">$<span>18,500</span></h4><hr>
-                    <input type="button" value="Agregar" data-id="2" class="card-btn">
+                    <input type="button" value="Agregar" class="card-btn" data-producto="Batería Pearl" data-precio="18500" data-id="2" data-img="/assets/images/Battery.png">
                 </article>
 
                 <article class="card">
@@ -92,7 +97,7 @@
                     <h3 class="card-title">Bajo Ibañez</h3>
                     <p class="card-info">Bajo electrico Ibañez en color azul andromeda.</p>
                     <h4 class="card-price">$<span>5,000</span></h4><hr>
-                    <input type="button" value="Agregar" data-id="3" class="card-btn">
+                    <input type="button" value="Agregar" class="card-btn" data-producto="Bajo Ibañez" data-precio="5000" data-id="3" data-img="/assets/images/Electric Bass.png">
                 </article>
 
                 <article class="card">
@@ -102,7 +107,7 @@
                     <h3 class="card-title">Violín Yamaha</h3>
                     <p class="card-info">Violín Yamaha con acabado en madera de roble.</p>
                     <h4 class="card-price">$<span>7,200</span></h4><hr>
-                    <input type="button" value="Agregar" data-id="4" class="card-btn">
+                    <input type="button" value="Agregar" class="card-btn" data-producto="Violín Yamaha" data-precio="7200" data-id="4">
                 </article>
 
                 <!-- <article class="card">
