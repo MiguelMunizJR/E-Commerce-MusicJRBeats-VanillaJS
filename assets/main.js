@@ -4,7 +4,7 @@ const cartContainer = document.querySelector('.cart-container');
 const countCart = document.querySelector('.circle span');
 const carTotal = document.querySelector('.car-total span');
 const cartTotal = document.querySelector('.cart-total span');
-// const closeCart = document.querySelector('.fa-xmark');
+
 
 /* Carrito Array */
 let carrito = [];
@@ -182,6 +182,76 @@ document.addEventListener('DOMContentLoaded', (i) => {
             limpiarCarrito(e);
         }
 
+        /**************/
+        /* Dark-Mode / Light-Mode */
+        if (e.target.matches('.mode .fa-solid')) {
+
+            /* Selectores Dark/Light Mode */
+            const moon = document.querySelector('.fa-moon');
+            const sun = document.querySelector('.fa-sun');
+            const header = document.querySelector('header');
+            const iconMode = document.querySelector('header .fa-solid');
+            const modeDiv = document.querySelector('.mode');
+            const circleCart = document.querySelector('.circle');
+            const iconCart = document.querySelector('.fa-cart-shopping');
+            const links = document.querySelector('.nav-links');
+            const lProducts = document.querySelector('.l-products');
+            const body = document.querySelector('body');
+            const footer = document.querySelector('footer');
+            const container = document.querySelector('.container');
+
+            if (sun.style.display === 'flex') {
+                sun.style.display = 'none';
+                moon.style.display = 'flex'
+            } else {
+                sun.style.display = 'flex';
+                moon.style.display = 'none';
+            }
+
+
+            if (sun.style.display === 'flex') {
+
+                header.style.backgroundColor = '#444444';
+                header.style.color = '#f5f5f5';
+                body.style.backgroundColor = '#222222';
+                body.style.color = '#eaeaea';
+                footer.style.backgroundColor = '#444444';
+                footer.style.color = '#eaeaea';
+                container.style.borderColor = '#333333';
+                links.style.color = '#eaeaea';
+                lProducts.style.color = '#eaeaea';
+                circleCart.style.backgroundColor = '#222222';
+                modeDiv.style.backgroundColor = '#222222';
+                iconMode.style.color = '#f5f5f5';
+                iconCart.style.color = '#eeeeee';
+                cart.style.backgroundColor = '#333333';
+                cart.style.color = '#f5f5f5';
+                cart.style.borderColor = '#444444';
+                cartContainer.style.backgroundColor = '#444444';
+                cartContainer.style.borderColor = '#333333';
+            }
+
+            else {
+                header.style.backgroundColor = '#e9e9e9';
+                header.style.color = '#222222';
+                body.style.backgroundColor = '#f8f8f8';
+                body.style.color = '#222222';
+                footer.style.backgroundColor = '#e9e9e9';
+                footer.style.color = '#eaeaea';
+                container.style.borderColor = '#d4d4d4';
+                links.style.color = '#222222';
+                lProducts.style.color = '#222222';
+                circleCart.style.backgroundColor = '#bebebe';
+                modeDiv.style.backgroundColor = '#bebebe';
+                iconMode.style.color = '#f5f5f5';
+                iconCart.style.color = '#222222';
+                cart.style.backgroundColor = '#e9e9e9';
+                cart.style.color = '#222222';
+                cart.style.borderColor = '#d4d4d4';
+                cartContainer.style.backgroundColor = '#f5f5f5';
+                cartContainer.style.borderColor = '#bebebe';
+            }
+        }
 
 
     });

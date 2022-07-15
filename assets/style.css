@@ -1,11 +1,22 @@
+:root {
+    --color-header__footer: #e9e9e9;
+    --color-white: #f8f8f8;
+    --color-blue: #2a5fad;
+    --color-red: #e74949;
+    --color-gray-primary: #bebebe;
+    --color-gray-secundary: #f5f5f5;
+    --color-dark: #222222;
+    --color-black: #000000;
+
+    --color-text-primary: #eeeeee;
+
+    --color-border-primary: #d4d4d4;
+    --color-border-secundary: #ebebeb;
+}
+
 * {
     margin: 0;
     padding: 0;
-}
-
-a{
-    text-decoration: none;
-    color: black;
 }
 
 header {
@@ -16,7 +27,7 @@ header {
     align-items: center;
     width: auto;
     height: 4rem;
-    background-color: #eeeeee;
+    background-color: var(--color-header__footer);
     z-index: 1000;
 }
 
@@ -24,6 +35,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Nunito Sans', sans-serif;
+    color: var(--color-dark);
+    background-color: var(--color-white);
 }
 
 footer {
@@ -33,7 +46,8 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #eeeeee;
+    color: var(--color-dark);
+    background-color: var(--color-header__footer);
 }
 
 .title {
@@ -41,8 +55,8 @@ footer {
     margin-left: 1rem;
     font-size: 2rem;
     border-radius: .8rem;
-    color: #eeeeee;
-    background-color: #2a5fad;
+    color: var(--color-text-primary);
+    background-color: var(--color-blue);
 }
 
 .nav__link {
@@ -52,21 +66,61 @@ footer {
     gap: 3rem;
 }
 
-.nav__link a {
+.nav-links {
     font-size: 1rem;
+    color: var(--color-dark);
+    text-decoration: none;
 }
 
-.nav__link a:hover {
+.nav-links:hover {
     transform:scale(1.05);
     transition: .1.5s;
-    color: #2a5fad;
+    color: var(--color-blue);
+}
+
+.mode {
+    margin-bottom: .7rem;
+    margin-right: 5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray-primary);
+}
+
+.mode button {
+    border: none;
+    background: none;
+}
+
+.fa-sun {
+    font-size: 1.4rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-sun:hover {
+    transform:scale(1.07);
+    transition: .1.5s;
+}
+
+.fa-moon {
+    font-size: 1.4rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.fa-moon:hover {
+    transform:scale(1.07);
+    transition: .1.5s;
 }
 
 .car {
     margin-top: 1rem;
     position: absolute;
     right: 5rem;
-    width: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +147,7 @@ footer {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: #cfcfcf;
+    background-color: var(--color-gray-primary);
 }
 
 .circle span {
@@ -113,6 +167,7 @@ footer {
 
 .fa-cart-shopping {
     font-size: 1.3rem;
+    color: var(--color-dark);
     cursor: pointer;
 }
 
@@ -125,8 +180,9 @@ footer {
     top: 4.2rem;
     width: 27rem;
     height: 31rem;
+    border: .1rem solid var(--color-border-primary);
     border-radius: .2rem;
-    background-color: #ffffff;
+    background-color: var(--color-header__footer);
 }
 
 .cart-title__iconD {
@@ -152,13 +208,14 @@ footer {
 
 .cart-container {
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: .5rem;
     height: 22rem;
-    border: .1rem solid #ebebeb;
+    border: .1rem solid var(--color-gray-primary);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    gap: .3rem;
+    background-color: var(--color-gray-secundary);
+    gap: .5rem;
 }
 
 .cart-card {
@@ -166,16 +223,8 @@ footer {
     display: flex;
     height: 4rem;
     flex-wrap: wrap;
-    border: .1rem solid #dbdbdb;
+    border: .1rem solid var(--color-border-primary);
     border-radius: 1rem;
-    background-color: #f3f3f3;
-}
-
-.cart-img {
-    width: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .cart-title {
@@ -215,21 +264,21 @@ footer {
     border: none;
     border-radius: .2rem;
     display: inline-block;
-    color: #ffffff;
+    color: var(--color-white);
     cursor: pointer;
 }
 
 .cart-card__btn:hover {
-    color: #eaeaea;
+    color: var(--color-text-primary);
     transition: .1s;
 }
 
 .card-add {
-    background-color: #2a5fad;
+    background-color: var(--color-blue);
 }
 
 .card-clear {
-    background-color: #e74949;
+    background-color: var(--color-red);
 }
 
 .cart-total {
@@ -251,8 +300,8 @@ footer {
     border: none;
     font-size: 1rem;
     font-weight: 400;
-    background-color: #2a5fad;
-    color: #ffffff;
+    background-color: var(--color-blue);
+    color: var(--color-white);
     border-radius: .3rem;
     cursor: pointer;
 }
@@ -267,8 +316,8 @@ footer {
     border: none;
     font-size: 1rem;
     font-weight: 400;
-    color: #ffffff;
-    background-color: #d33636;
+    color: var(--color-white);
+    background-color: var(--color-red);
     border-radius: .3rem;
     cursor: pointer;
 }
@@ -292,21 +341,21 @@ footer {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 800;
-    color: #eeeeee;
+    color: var(--color-text-primary);
 }
 
 .hero-title span {
     padding: .1rem .2rem;
     font-weight: 600;
     border-radius: 1.5rem;
-    background-color: #2a5fad;
+    background-color: var(--color-blue);
 }
 
 .hero-info {
     margin-top: 1rem;
     font-size: 1rem;
     font-weight: 600;
-    color: #c9c9c9;
+    color: var(--color-gray-secundary);
 }
 
 .products {
@@ -327,7 +376,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: .1rem solid #ebebeb;
+    border: .1rem solid var(--color-border-secundary);
+    border-radius: .5rem;
 }
 
 .card {
@@ -336,9 +386,8 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-border-primary);
     border-radius: 1rem;
-    box-shadow: 1px 3px 5px rgb(201, 201, 201);
 }
 
 .card-img {
@@ -375,22 +424,23 @@ footer {
     margin: 1rem 0 0 10rem;
     width: 5rem;
     padding: .4rem;
-    border: none;
-    border-radius: 1rem;
-    background-color: #2a5fad;
-    color: #ffffff;
     font-size: 1rem;
     font-weight: 200;
+    color: var(--color-dark);
+    background-color: var(--color-gray-secundary);
+    border: .1rem solid var(--color-dark);
+    border-radius: 1rem;
     cursor: pointer;
 }
 
 .card-btn:hover {
     transform:scale(1.01);
     transition: .1s;
+    color: var(--color-white);
+    background-color: var(--color-blue);
 }
 
 .footer-text {
     font-size: 1rem;
     font-weight: 200;
-    color: #666666;
 }
