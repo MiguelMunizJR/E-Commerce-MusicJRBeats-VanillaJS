@@ -93,17 +93,17 @@ const cardAdd = (e) => {
 /* Eliminar producto desde carrito DOM */
 const cardClear = (e) => {
 
+    const index = carrito.findIndex(item => item.id === e.target.dataset.id);
+
     carrito.forEach((item) => {
-        if (item.id === e.target.dataset.id) {
-            if (item.cantidad >= 1) {
+        if (item.id == e.target.dataset.id) {
+            if (item.cantidad > 0) {
                 item.cantidad --;
                 if (item.cantidad === 0) {
-                    alert('esta en cero...');
-                    
+                    window.alert('Desea eliminar el producto?');
+                    carrito.splice(index, 1);
                 }
             }
-        } else {
-            return item;
         }
     });
 

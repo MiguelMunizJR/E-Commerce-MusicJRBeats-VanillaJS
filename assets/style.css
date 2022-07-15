@@ -25,13 +25,13 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: auto;
     height: 4rem;
     background-color: var(--color-header__footer);
     z-index: 1000;
 }
 
 body {
+    min-width: 375px;
     display: flex;
     flex-direction: column;
     font-family: 'Nunito Sans', sans-serif;
@@ -41,6 +41,7 @@ body {
 
 footer {
     margin-top: 5rem;
+    min-width: 375px;
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -176,10 +177,10 @@ footer {
     position: absolute;
     display: none;
     flex-direction: column;
-    right: .3rem;
-    top: 4.2rem;
+    right: .2rem;
+    top: 4rem;
     width: 27rem;
-    height: 31rem;
+    height: 25rem;
     border: .1rem solid var(--color-border-primary);
     border-radius: .2rem;
     background-color: var(--color-header__footer);
@@ -191,7 +192,8 @@ footer {
 
 .cart-title__iconD button {
     margin-top: -1rem;
-    margin-left: 12rem;
+    position: relative;
+    left: 37%;
     border: none;
     background: none;
 }
@@ -209,12 +211,13 @@ footer {
 .cart-container {
     margin-bottom: 2rem;
     padding: .5rem;
-    height: 22rem;
+    height: 70%;
     border: .1rem solid var(--color-gray-primary);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     background-color: var(--color-gray-secundary);
+    overflow-y: auto;
     gap: .5rem;
 }
 
@@ -289,7 +292,7 @@ footer {
 }
 
 .cart-btn {
-    margin-left: 15rem;
+    margin-top: 2rem;
     width: 12rem;
     display: flex;
     justify-content: space-evenly;
@@ -329,13 +332,16 @@ footer {
 
 .hero {
     background-image: url(/assets/images/Hero.jpg);
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 34rem;
+    display: flex;
 }
 
 .hero__title {
-    margin: 10rem 0 0 1rem;
+    margin: 10rem auto 1rem;
     display: inline-block;
-
 }
 
 .hero-title {
@@ -359,6 +365,8 @@ footer {
 }
 
 .products {
+    margin: 0 auto;
+    max-width: 1200px;
     padding: 1rem 4rem;
 }
 
@@ -369,15 +377,17 @@ footer {
 }
 
 .container {
+    margin: 0 auto;
     padding: 2rem 1rem;
-    width: 90vw;
+    max-width: 1200px;
     height: auto;
     text-align: center;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     border: .1rem solid var(--color-border-secundary);
     border-radius: .5rem;
+    gap: 1rem;
 }
 
 .card {
@@ -443,4 +453,102 @@ footer {
 .footer-text {
     font-size: 1rem;
     font-weight: 200;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .nav-links {
+        display: none;
+    }
+
+    .mode {
+        margin: 0;
+        margin-top: -.5rem;
+        margin-right: 3rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .cart {
+        top: 3.9rem;
+        right: 0;
+        height: 100vh;
+        width: 65vw;
+    }
+
+    .cart__title {
+        font-size: 1.2rem;
+    }
+
+    .cart-container {
+        height: 50vh;
+    }
+
+    .cart-card {
+        height: auto;
+        flex-direction: row;
+    }
+
+    .cart-title {
+        font-size: 1rem;
+    }
+
+    .cart-d {
+        margin: 0;
+        margin-left: 8%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 8rem;
+        gap: 1rem;
+    }
+
+    .cart-total {
+        font-size: 1.2rem;
+    }
+
+    .fa-xmark {
+        display: none;
+    }
+
+    .car {
+        right: 1rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .card-btn {
+        margin: 0;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    
+    .mode {
+        margin: 0;
+        margin-top: -.5rem;
+        margin-right: 2rem;
+    }
+
+    .cart-card {
+        min-width: auto;
+    }
+
+    .cart-d {
+        margin: 0;
+        margin-top: 1rem;
+        margin-left: 1.3rem;
+        gap: 0;
+    }
+
+    .cart__btns {
+        margin-top: 1rem;
+        width: 10rem;
+        height: 2rem;
+    }
 }
