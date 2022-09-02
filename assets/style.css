@@ -255,6 +255,7 @@ footer {
   font-size: 1.1rem;
   font-weight: 600;
 }
+
 .cart__btns {
   margin-top: -1.8rem;
   display: flex;
@@ -532,6 +533,10 @@ footer {
     margin-right: 2rem;
   }
 
+  .car-total {
+    font-size: 0;
+  }
+
   .cart-card {
     min-width: auto;
   }
@@ -547,5 +552,11 @@ footer {
     margin-top: 1rem;
     width: 10rem;
     height: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card-img img {
+    width: 100%;
   }
 }
